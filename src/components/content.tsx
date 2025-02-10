@@ -166,17 +166,18 @@ export default function MedicalInfo() {
 
   const sectionKeys = Object.keys(sections) as Array<keyof typeof sections>
   const [activeSection, setActiveSection] = useState<string>('Introduction')
+
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen gap-6 px-4 sm:px-6 lg:px-32 py-6 sm:py-10 ">
-      <aside className="w-full lg:w-72 border border-gray-200 bg-white shadow-md rounded-lg lg:sticky lg:top-10 h-fit">
-        <ScrollArea className="max-h-[80vh] lg:max-h-[calc(100vh-120px)] p-4">
-          <h2 className="text-lg font-semibold text-gray-700 mb-3">Navigation</h2>
-          <div className="space-y-2">
+    <div className="flex flex-col lg:flex-row min-h-screen gap-8 px-6 sm:px-10 lg:px-32 py-8 sm:py-12 ">
+      <aside className="w-full lg:w-72 border border-gray-300 bg-white shadow-lg rounded-xl lg:sticky lg:top-10 h-fit p-5">
+        <ScrollArea className="max-h-[80vh] lg:max-h-[calc(100vh-120px)]">
+          <h2 className="text-xl font-bold text-gray-800 mb-4">Navigation</h2>
+          <div className="space-y-3">
             {sectionKeys.map((section) => (
               <Button
                 key={section}
                 variant={activeSection === section ? 'default' : 'ghost'}
-                className="w-full justify-start gap-2 py-2 text-sm sm:text-base"
+                className={`w-full justify-start gap-2 py-3 text-base font-medium rounded-lg transition-colors ${activeSection === section ? 'bg-green-600 text-white' : 'hover:bg-gray-200 text-gray-700'}`}
                 onClick={() => setActiveSection(section)}
               >
                 {getIcon(section)}
@@ -188,47 +189,43 @@ export default function MedicalInfo() {
       </aside>
 
       <main className="flex-1 w-full">
-        <Card className="w-full max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
-          <CardContent className="p-5 sm:p-6">
+        <Card className="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
+          <CardContent className="p-6 sm:p-8">
             <div className="scroll-mt-10">
-              <h2 className="text-lg sm:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                 {getIcon(activeSection)}
                 {activeSection}
               </h2>
-              <div className="prose max-w-none space-y-4 sm:space-y-6 text-gray-800 leading-relaxed">
+              <div className="prose max-w-none space-y-5 sm:space-y-7 text-gray-700 leading-relaxed">
                 {sections[activeSection].content.map((paragraph, index) => (
-                  <p key={index} className="text-gray-700 text-sm sm:text-base">
+                  <p key={index} className="text-lg">
                     {paragraph}
                   </p>
                 ))}
 
                 {sections[activeSection].important && (
-                  <div className="mt-4 sm:mt-6 bg-green-100 p-4 rounded-lg border border-green-300">
-                    <h3 className="text-green-600 font-semibold mb-2 flex items-center gap-2">
-                      <AlertOctagon className="h-5 w-5" />
+                  <div className="mt-6 bg-green-50 p-5 rounded-lg border border-green-400 shadow-sm">
+                    <h3 className="text-green-700 font-semibold text-lg mb-3 flex items-center gap-2">
+                      <AlertOctagon className="h-6 w-6" />
                       Important Notes
                     </h3>
-                    <ul className="list-disc pl-5 space-y-1 text-sm sm:text-base">
+                    <ul className="list-disc pl-6 space-y-2 text-base text-green-700">
                       {sections[activeSection].important.map((note, index) => (
-                        <li key={index} className="text-green-600">
-                          {note}
-                        </li>
+                        <li key={index}>{note}</li>
                       ))}
                     </ul>
                   </div>
                 )}
 
                 {sections[activeSection].tips && (
-                  <div className="mt-4 sm:mt-6 bg-blue-100 p-4 rounded-lg border border-blue-300">
-                    <h3 className="text-green-600 font-semibold mb-2 flex items-center gap-2">
-                      <Lightbulb className="h-5 w-5" />
+                  <div className="mt-6 bg-blue-50 p-5 rounded-lg border border-green-400 shadow-sm">
+                    <h3 className="text-green-700 font-semibold text-lg mb-3 flex items-center gap-2">
+                      <Lightbulb className="h-6 w-6" />
                       Helpful Tips
                     </h3>
-                    <ul className="list-disc pl-5 space-y-1 text-sm sm:text-base">
+                    <ul className="list-disc pl-6 space-y-2 text-base text-green-700">
                       {sections[activeSection].tips.map((tip, index) => (
-                        <li key={index} className="text-green-600">
-                          {tip}
-                        </li>
+                        <li key={index}>{tip}</li>
                       ))}
                     </ul>
                   </div>
