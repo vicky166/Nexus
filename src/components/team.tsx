@@ -60,7 +60,7 @@ export default function TeamSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {doctors.map((doctor, ) => (
+          {doctors.map((doctor) => (
             <Card
               key={doctor.id}
               className="group relative h-[450px] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
@@ -101,7 +101,7 @@ export default function TeamSection() {
         </div>
 
         <div className="mt-16 text-center max-w-3xl mx-auto">
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-black leading-relaxed">
             Our team of board-certified medical aesthetic doctors brings together decades of
             experience in advanced cosmetic procedures. We&apos;re committed to delivering
             natural-looking results with the highest standards of safety and care.
