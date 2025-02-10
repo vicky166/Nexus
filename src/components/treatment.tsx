@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 
 export default function Treatment() {
   return (
-    <div className="container mx-auto px-4 py-12 md:py-20 max-w-5xl">
+    <div className="container mx-auto px-4 py-12 md:py-20 max-w-7xl">
       <section className="text-center mb-12 md:mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           CO2 Laser Skin Resurfacing

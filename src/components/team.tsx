@@ -60,7 +60,7 @@ export default function TeamSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {doctors.map((doctor, ) => (
+          {doctors.map((doctor) => (
             <Card
               key={doctor.id}
               className="group relative h-[450px] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"

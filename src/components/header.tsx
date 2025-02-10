@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { CheckCircle } from 'lucide-react';
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { CheckCircle } from 'lucide-react'
 
 export default function Header() {
   return (
@@ -22,10 +22,11 @@ export default function Header() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
             Fractional CO2 <span className="text-green-600">Laser Treatment</span>
           </h2>
-          
+
           <p className="text-lg text-gray-700 leading-relaxed">
-            Fractional CO2 laser treatment is an innovative method that uses laser energy microbeams 
-            to penetrate and break down skin tissue, eliminating scars, wrinkles, sun damage, fine lines, and more.
+            Fractional CO2 laser treatment is an innovative method that uses laser energy microbeams
+            to penetrate and break down skin tissue, eliminating scars, wrinkles, sun damage, fine
+            lines, and more.
           </p>
 
           <ul className="space-y-3">
@@ -53,5 +54,5 @@ export default function Header() {
         </div>
       </div>
     </section>
-  );
+  )
 }

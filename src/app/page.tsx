@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
+import Products from "@/components/products";
 import Review from "@/components/reviews";
 import Team from "@/components/team";
 import { Top } from "@/components/top";
@@ -18,6 +19,7 @@ export default function Home() {
    <Header/>
    <Treatment/>
    <Team/>
+   <Products/>
    <Review/>
    <Footer/>  
    </>

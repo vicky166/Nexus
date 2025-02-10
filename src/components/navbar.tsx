@@ -1,6 +1,6 @@
 'use client'
 
-import { Menu, Search,  User,  } from 'lucide-react'
+import { Menu, Search, User } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import {
@@ -34,7 +34,16 @@ export default function Navbar() {
               <img src="/img/logo.png" alt="Nexus Clinic" className="h-8 w-auto" />
             </Link>
             <div className="grid gap-1">
-              {['Aesthetic Clinic', 'The Face', 'The Body', 'Fat & Weight Loss', 'Hair Loss Treatment', 'Female Only', 'Male Only', 'Medi Spa'].map((item) => (
+              {[
+                'Aesthetic Clinic',
+                'The Face',
+                'The Body',
+                'Fat & Weight Loss',
+                'Hair Loss Treatment',
+                'Female Only',
+                'Male Only',
+                'Medi Spa',
+              ].map((item) => (
                 <Link
                   key={item}
                   href="#"
@@ -61,7 +70,15 @@ export default function Navbar() {
                 Aesthetic Clinic
               </Link>
             </NavigationMenuLink>
-            {['The Face', 'The Body', 'Fat & Weight Loss', 'Hair Loss Treatment', 'Female Only', 'Male Only', 'Medi Spa'].map((item) => (
+            {[
+              'The Face',
+              'The Body',
+              'Fat & Weight Loss',
+              'Hair Loss Treatment',
+              'Female Only',
+              'Male Only',
+              'Medi Spa',
+            ].map((item) => (
               <NavigationMenuItem key={item}>
                 <NavigationMenuTrigger className="h-8 px-3 text-xs text-white bg-transparent hover:bg-white/5 data-[state=open]:bg-white/10">
                   {item}
@@ -74,9 +91,7 @@ export default function Navbar() {
                         className="block select-none space-y-1 rounded-md p-2 text-xs leading-none no-underline outline-none hover:bg-white/5"
                       >
                         <div className="font-medium">Treatment 1</div>
-                        <p className="line-clamp-2 text-xs text-white/70">
-                          Treatment description
-                        </p>
+                        <p className="line-clamp-2 text-xs text-white/70">Treatment description</p>
                       </Link>
                     </NavigationMenuLink>
                   </div>
@@ -94,7 +109,6 @@ export default function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Right Side Icons */}
         <div className="ml-auto flex items-center gap-2">
           <button className="text-white p-1.5 rounded-md hover:bg-white/5">
             <Search className="h-4 w-4" />
