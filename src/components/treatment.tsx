@@ -32,7 +32,7 @@ export default function Treatment() {
           <span className="font-medium text-primary">laser resurfacing</span> results depends on
           diligent sun protection and a healthy lifestyle. Consistent sunscreen use and protective
           clothing can help maintain the benefits for years to come.
-        </p>
+        </p>  
       </section>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -82,7 +82,7 @@ export default function Treatment() {
           </CardContent>
         </Card>
       </div>
-
+      
       <section className="flex flex-col items-center gap-5 md:gap-6">
         <Button
           size="lg"
