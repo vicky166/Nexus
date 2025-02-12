@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Star, Clock, Calendar, Award, Heart } from "lucide-react";
+import React from 'react'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { Star, Clock, Calendar, Award, Heart } from 'lucide-react'
 
 const Product = () => {
   return (
@@ -17,9 +17,7 @@ const Product = () => {
           </p>
         </div>
 
-        {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Column - Image and Quick Info */}
           <div className="space-y-6">
             <Card className="overflow-hidden">
               <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] bg-white">
@@ -33,11 +31,18 @@ const Product = () => {
               </div>
             </Card>
 
-            {/* Quick Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { icon: <Clock className="w-5 h-5 text-green-600" />, title: "Duration", desc: "45-60 minutes" },
-                { icon: <Calendar className="w-5 h-5 text-green-600" />, title: "Results Last", desc: "Up to 2 years" },
+                {
+                  icon: <Clock className="w-5 h-5 text-green-600" />,
+                  title: 'Duration',
+                  desc: '45-60 minutes',
+                },
+                {
+                  icon: <Calendar className="w-5 h-5 text-green-600" />,
+                  title: 'Results Last',
+                  desc: 'Up to 2 years',
+                },
               ].map((item, index) => (
                 <Card key={index} className="p-4 bg-green-50 flex items-start gap-3">
                   {item.icon}
@@ -50,7 +55,6 @@ const Product = () => {
             </div>
           </div>
 
-          {/* Right Column - Product Details */}
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -64,23 +68,33 @@ const Product = () => {
               <Heart className="w-6 h-6 text-gray-400 hover:text-red-500 cursor-pointer" />
             </div>
 
-            <div className="flex items-baseline gap-4">
-              <span className="text-3xl sm:text-4xl font-bold text-green-600">$699</span>
-              <span className="text-lg sm:text-xl text-gray-500 line-through">$899</span>
-              <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Limited Time Offer</span>
-            </div>
-
             <p className="text-gray-600 leading-relaxed">
-              Experience the transformative power of Sculptra®, an advanced aesthetic treatment that enhances facial contours naturally.
+              Experience the transformative power of Sculptra®, an advanced aesthetic treatment
+              that enhances facial contours naturally.
             </p>
 
-            {/* Benefits Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { icon: <Award className="w-5 h-5 text-green-600" />, title: "FDA Approved", desc: "Safe and clinically proven" },
-                { icon: <Clock className="w-5 h-5 text-green-600" />, title: "Long Lasting", desc: "Results that endure" },
-                { icon: <Star className="w-5 h-5 text-green-600" />, title: "Natural Results", desc: "Gradual enhancement" },
-                { icon: <Calendar className="w-5 h-5 text-green-600" />, title: "Quick Recovery", desc: "Minimal downtime" },
+                {
+                  icon: <Award className="w-5 h-5 text-green-600" />,
+                  title: 'FDA Approved',
+                  desc: 'Safe and clinically proven',
+                },
+                {
+                  icon: <Clock className="w-5 h-5 text-green-600" />,
+                  title: 'Long Lasting',
+                  desc: 'Results that endure',
+                },
+                {
+                  icon: <Star className="w-5 h-5 text-green-600" />,
+                  title: 'Natural Results',
+                  desc: 'Gradual enhancement',
+                },
+                {
+                  icon: <Calendar className="w-5 h-5 text-green-600" />,
+                  title: 'Quick Recovery',
+                  desc: 'Minimal downtime',
+                },
               ].map((benefit, index) => (
                 <Card key={index} className="p-4 flex gap-3">
                   {benefit.icon}
@@ -92,7 +106,6 @@ const Product = () => {
               ))}
             </div>
 
-            {/* Action Buttons */}
             <div className="space-y-4 pt-6">
               <Button className="w-full bg-green-600 hover:bg-green-700 h-12 text-lg">
                 Schedule Your Consultation
@@ -108,7 +121,7 @@ const Product = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Product;
+export default Product
