@@ -1,8 +1,8 @@
 'use client'
-import { FaDollarSign } from 'react-icons/fa'
-import { IoMdCheckmarkCircle } from 'react-icons/io'
-import Link from 'next/link'
-import { useRef } from 'react'
+import { FaDollarSign } from 'react-icons/fa';
+import { IoMdCheckmarkCircle } from 'react-icons/io';
+import Link from 'next/link';
+import { useRef } from 'react';
 
 const products = [
   {
@@ -110,79 +110,76 @@ const products = [
     imageUrl: '/img/chemical.jpg',
     available: true,
   },
-]
+];
 
 export const Products = () => {
-  const scrollRef = useRef<HTMLDivElement>(null)
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: number) => {
-    const scrollAmount = 300
+    const scrollAmount = 300;
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
         left: direction * scrollAmount,
         behavior: 'smooth',
-      })
+      });
     }
-  }
+  };
 
   return (
-    <section className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center text-white font-semibold leading-tight mb-8">
-        Our Treatments & Products
-      </h2>
-
-      <div className="relative">
+    <section className="container mx-auto px-4 py-12">
+      <h2 className="text-4xl font-bold text-center text-white mb-12">Our Treatments & Products</h2>
+      
+      <div className="relative flex items-center">
         <button
           onClick={() => scroll(-1)}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white bg-black p-4 rounded-full shadow-md"
+          className="absolute left-2 z-10 bg-gray-800 text-white p-3 rounded-full shadow-lg"
         >
           &#8592;
         </button>
-
-        <div ref={scrollRef} className="flex overflow-x-auto space-x-8 pb-8 scrollbar-hide">
+        
+        <div ref={scrollRef} className="flex overflow-x-auto space-x-6 pb-4 scrollbar-hide px-12">
           {products.map((product, index) => (
             <div
               key={index}
-              className="min-w-[320px] max-w-[350px] border border-black p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg flex flex-col justify-between"
+              className="min-w-[320px] max-w-[350px] bg-white shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105"
             >
               <img
                 src={product.imageUrl}
                 alt={product.name}
-                className="w-full h-[130px] object-cover rounded-t-xl mb-4"
+                className="w-full h-[160px] object-cover"
               />
-              <h3 className="text-2xl sm:text-3xl text-black font-semibold">{product.name}</h3>
-              <div className="flex items-center gap-2 mt-2">
-                <FaDollarSign className="text-[#F5B041] text-2xl" />
-                <p className="text-black text-lg">{product.price}</p>
-              </div>
-              <p className="text-black mt-4 text-sm sm:text-base lg:text-lg">
-                {product.description}
-              </p>
-
-              <div className="mt-6 flex justify-between items-center">
-                {product.available ? (
-                  <div className="flex items-center text-black">
-                    <IoMdCheckmarkCircle className="text-xl mr-2" />
-                    <span className="text-lg">Available Now</span>
-                  </div>
-                ) : (
-                  <div className="text-red-500 text-lg">Currently Unavailable</div>
-                )}
-                <Link href="/contact" passHref></Link>
+              <div className="p-6 flex flex-col">
+                <h3 className="text-xl font-semibold text-gray-900">{product.name}</h3>
+                <div className="flex items-center gap-2 mt-2">
+                  <FaDollarSign className="text-[#F5B041] text-lg" />
+                  <p className="text-gray-700 text-lg">{product.price}</p>
+                </div>
+                <p className="text-gray-600 mt-2 text-sm">{product.description}</p>
+                <div className="mt-4 flex justify-between items-center">
+                  {product.available ? (
+                    <div className="flex items-center text-green-600">
+                      <IoMdCheckmarkCircle className="text-lg mr-1" />
+                      <span className="text-sm">Available Now</span>
+                    </div>
+                  ) : (
+                    <div className="text-red-500 text-sm">Currently Unavailable</div>
+                  )}
+                  <Link href="/contact" className="text-blue-500 text-sm font-semibold">Book Now</Link>
+                </div>
               </div>
             </div>
           ))}
         </div>
-
+        
         <button
           onClick={() => scroll(1)}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-black p-4 rounded-full shadow-md"
+          className="absolute right-2 z-10 bg-gray-800 text-white p-3 rounded-full shadow-lg"
         >
           &#8594;
         </button>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;
