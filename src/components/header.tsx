@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { CheckCircle } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 export default function Header() {
   return (
@@ -31,19 +31,19 @@ export default function Header() {
 
           <ul className="space-y-3">
             <li className="flex items-center gap-2 text-gray-700">
-              <CheckCircle className="w-5 h-5 text-green-600" />
+              <Check className="w-5 h-5 text-green-600" />
               Immediate results with multiple sessions for long-term benefits.
             </li>
             <li className="flex items-center gap-2 text-gray-700">
-              <CheckCircle className="w-5 h-5 text-green-600" />
+              <Check className="w-5 h-5 text-green-600" />
               Non-surgical procedure that reduces wrinkles and fine lines.
             </li>
             <li className="flex items-center gap-2 text-gray-700">
-              <CheckCircle className="w-5 h-5 text-green-600" />
+              <Check className="w-5 h-5 text-green-600" />
               Promotes collagen production and skin tightening.
             </li>
             <li className="flex items-center gap-2 text-gray-700">
-              <CheckCircle className="w-5 h-5 text-green-600" />
+              <Check className="w-5 h-5 text-green-600" />
               Effective for treating sun damage and acne scars.
             </li>
           </ul>

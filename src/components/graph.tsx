@@ -11,7 +11,6 @@ import {
 } from "recharts";
 import { motion } from "framer-motion";
 
-// Disable SSR for this component
 const ChartComponent = dynamic(() => Promise.resolve(Chart), { ssr: false });
 
 const Chart = () => {
