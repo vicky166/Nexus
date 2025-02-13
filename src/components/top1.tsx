@@ -36,7 +36,6 @@ export default function Top1() {
             Book Appointment
           </Button>
         </div>
-
         <div className="relative h-[600px] w-full">
           <img
             src="/img/girl2.png"

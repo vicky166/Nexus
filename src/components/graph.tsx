@@ -1,17 +1,10 @@
-"use client";
-import React from "react";
-import dynamic from "next/dynamic";
-import {
-  Area,
-  AreaChart,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-  Tooltip,
-} from "recharts";
-import { motion } from "framer-motion";
+'use client'
+import React from 'react'
+import dynamic from 'next/dynamic'
+import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts'
+import { motion } from 'framer-motion'
 
-const ChartComponent = dynamic(() => Promise.resolve(Chart), { ssr: false });
+const ChartComponent = dynamic(() => Promise.resolve(Chart), { ssr: false })
 
 const Chart = () => {
   const data = [
@@ -23,7 +16,7 @@ const Chart = () => {
     { age: 70, collagen: 35 },
     { age: 80, collagen: 20 },
     { age: 90, collagen: 5 },
-  ];
+  ]
 
   return (
     <motion.div
@@ -38,9 +31,11 @@ const Chart = () => {
         </h2>
         <p className="text-gray-600 text-center text-lg leading-relaxed">
           Aging isn&apos;t about wrinkles or sagging skin. Its about your body slowing collagen
-          <span className="font-semibold"> production by 1% every year after 25</span>. Traditional fillers just
-          inflate wrinkles temporarily. <span className="text-green-700 font-semibold">Sculptra®</span> works
-          differently: it <span className="italic">rebuilds</span> collagen for results that look natural and youthful.
+          <span className="font-semibold"> production by 1% every year after 25</span>. Traditional
+          fillers just inflate wrinkles temporarily.{' '}
+          <span className="text-green-700 font-semibold">Sculptra®</span> works differently: it{' '}
+          <span className="italic">rebuilds</span> collagen for results that look natural and
+          youthful.
         </p>
       </div>
       <div className="px-8 pb-8">
@@ -50,12 +45,17 @@ const Chart = () => {
               <XAxis
                 dataKey="age"
                 stroke="#888888"
-                label={{ value: "Age (years)", position: "bottom", offset: 0 }}
+                label={{ value: 'Age (years)', position: 'bottom', offset: 0 }}
                 tickCount={8}
               />
               <YAxis
                 stroke="#888888"
-                label={{ value: "Percentage of collagen", angle: -90, position: "insideLeft", offset: 10 }}
+                label={{
+                  value: 'Percentage of collagen',
+                  angle: -90,
+                  position: 'insideLeft',
+                  offset: 10,
+                }}
                 tickFormatter={(value) => `${value}%`}
               />
               <Tooltip formatter={(value) => `${value}%`} />
@@ -76,12 +76,12 @@ const Chart = () => {
           </ResponsiveContainer>
         </div>
         <blockquote className="mt-8 border-l-4 border-green-600 pl-4 italic text-gray-600 text-lg">
-          I tried fillers for years – they made me look puffy. Sculptra gave me my cheekbones back without looking
-          fake. <span className="font-semibold">– Sarah, 42</span>
+          I tried fillers for years – they made me look puffy. Sculptra gave me my cheekbones back
+          without looking fake. <span className="font-semibold">– Sarah, 42</span>
         </blockquote>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default ChartComponent;
+export default ChartComponent

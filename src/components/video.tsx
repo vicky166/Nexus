@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 interface VideoPlayerProps {
   videoId: string;
   title?: string;
-  subtitle?: string;
+  subtitle?: string;  
 }
 
 export default function Video({
@@ -16,7 +16,7 @@ export default function Video({
       <CardHeader className="space-y-2 px-6 py-4">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
         <p className="text-lg text-muted-foreground italic">{subtitle}</p>
-      </CardHeader>
+      </CardHeader> 
       <CardContent className="p-0">
         <div className="relative w-full aspect-video">
           <iframe
