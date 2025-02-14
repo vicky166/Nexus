@@ -38,6 +38,7 @@ const Chart = () => {
           youthful.
         </p>
       </div>
+      
       <div className="px-8 pb-8">
         <div className="h-[400px] w-full mt-8">
           <ResponsiveContainer width="100%" height="100%">
@@ -46,7 +47,7 @@ const Chart = () => {
                 dataKey="age"
                 stroke="#888888"
                 label={{ value: 'Age (years)', position: 'bottom', offset: 0 }}
-                tickCount={8}
+                tickCount={8} 
               />
               <YAxis
                 stroke="#888888"
