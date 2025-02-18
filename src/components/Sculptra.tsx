@@ -1,6 +1,6 @@
 import React from 'react'
 import { Check, X } from 'lucide-react'
-import { Card, CardHeader, CardContent } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 
 const SculptraComponent = () => {
   const steps = [
@@ -69,169 +69,208 @@ const SculptraComponent = () => {
       bestFor: 'Surface hydration',
     },
   ]
-
   return (
-    <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 bg-bg-gradient-to-br from-green-50 to-white lg:px-8">
-      <Card className="mb-12 bg-[#F2FDF6]">
-        <CardHeader>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Sculptra®: Your Skin&apos;s Personal Trainer
-          </h1>
-          <p className="text-lg text-gray-700">
-            Sculptra® uses poly-L-lactic acid (PLLA), a biocompatible ingredient that acts like a
-            personal trainer for your skin.
-          </p>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {timeline.map((item, index) => (
-              <div key={index} className="bg-[#F2FDF6] p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">{item.month}</h3>
-                <p className="text-gray-700">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
+    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-white">
+      <Card className="mb-16 border-none shadow-xl overflow-hidden">
+        <div className="bg-gradient-to-r from-green-100 to-green-50 p-1">
+          <CardContent className="p-8 md:p-12 bg-white rounded-lg">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+              Sculptra®: Your Skin&apos;s <span className="text-green-600">Personal Trainer</span>
+            </h1>
+            <p className="text-xl text-gray-700 max-w-3xl mb-8 leading-relaxed">
+              Sculptra® uses poly-L-lactic acid (PLLA), a biocompatible ingredient that acts like a
+              personal trainer for your skin, gradually restoring youthful volume and radiance.
+            </p>
+            <a
+              href="#consultation"
+              className="inline-block px-8 py-4 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all transform hover:scale-105 font-semibold text-lg"
+            >
+              Schedule Your Consultation →
+            </a>
+          </CardContent>
+        </div>
       </Card>
 
-      <Card className="mb-12 bg-[#F2FDF6]">
-        <CardHeader>
-          <h2 className="text-2xl font-bold text-gray-800">Real Results Real People</h2>
-        </CardHeader>
-        <CardContent>
-          <a
-            href="#"
-            className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-          >
-            See Patient&apos;s 9-Month Transformation →
-          </a>
-        </CardContent>
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          The Transformation Journey
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {timeline.map((item, index) => (
+            <Card
+              key={index}
+              className="border-none shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+            >
+              <div className="h-2 bg-gradient-to-r from-green-400 to-green-600"></div>
+              <CardContent className="p-8">
+                <h3 className="font-bold text-xl text-gray-800 mb-3">{item.month}</h3>
+                <p className="text-gray-700 leading-relaxed">{item.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      <Card className="mb-16 border-none shadow-xl overflow-hidden">
+        <div className="bg-gradient-to-r from-green-100 to-green-50 p-1">
+          <CardContent className="p-8 md:p-12 bg-white rounded-lg text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Real Results, Real People</h2>
+            <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+              See how Sculptra® has transformed our patients&apos; appearance with natural-looking
+              results that improve over time.
+            </p>
+            <a
+              href="#testimonials"
+              className="inline-block px-8 py-4 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all transform hover:scale-105 font-semibold text-lg"
+            >
+              See Patient&apos;s 9-Month Transformation →
+            </a>
+          </CardContent>
+        </div>
       </Card>
 
-      <Card className="mb-12  bg-[#F2FDF6] overflow-hidden">
-        <CardHeader>
-          <h2 className="text-2xl font-bold text-gray-800">Sculptra® vs. Other Treatments</h2>
-        </CardHeader>
-        <CardContent className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-[#F2FDF6]">
-              <tr>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
-                  Treatment
-                </th>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
-                  Results Last
-                </th>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
-                  Natural Look?
-                </th>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
-                  Collagen Boost?
-                </th>
-                <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
-                  Best For
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-[#F2FDF6] divide-y divide-gray-200">
-              {treatments.map((treatment, index) => (
-                <tr key={index}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                    {treatment.name}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                    {treatment.duration}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm">
-                    {treatment.natural ? (
-                      <span className="text-green-600 flex items-center">
-                        <Check className="w-5 h-5 mr-1" />
-                        Yes
-                      </span>
-                    ) : (
-                      <span className="text-red-600 flex items-center">
-                        <X className="w-5 h-5 mr-1" />
-                        No
-                      </span>
-                    )}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm">
-                    {treatment.collagen ? (
-                      <span className="text-green-600 flex items-center">
-                        <Check className="w-5 h-5 mr-1" />
-                        68% increase*
-                      </span>
-                    ) : (
-                      <span className="text-red-600 flex items-center">
-                        <X className="w-5 h-5 mr-1" />
-                        No
-                      </span>
-                    )}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                    {treatment.bestFor}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="text-sm text-gray-500 mt-4">
-            Source: Journal of Cosmetic Dermatology, 2022
-          </p>
-        </CardContent>
-      </Card>
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Sculptra® vs. Other Treatments
+        </h2>
+        <Card className="border-none shadow-xl overflow-hidden">
+          <CardContent className="p-0">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-green-50">
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 border-b border-green-100">
+                      Treatment
+                    </th>
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 border-b border-green-100">
+                      Results Last
+                    </th>
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 border-b border-green-100">
+                      Natural Look?
+                    </th>
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 border-b border-green-100">
+                      Collagen Boost?
+                    </th>
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 border-b border-green-100">
+                      Best For
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-green-50">
+                  {treatments.map((treatment, index) => (
+                    <tr
+                      key={index}
+                      className={index === 0 ? 'bg-green-50 bg-opacity-30' : 'hover:bg-gray-50'}
+                    >
+                      <td className="px-6 py-5 whitespace-nowrap text-sm font-semibold text-gray-800">
+                        {treatment.name}
+                      </td>
+                      <td className="px-6 py-5 whitespace-nowrap text-sm text-gray-700">
+                        {treatment.duration}
+                      </td>
+                      <td className="px-6 py-5 whitespace-nowrap text-sm">
+                        {treatment.natural ? (
+                          <span className="text-green-600 flex items-center">
+                            <Check className="w-5 h-5 mr-1" />
+                            Yes
+                          </span>
+                        ) : (
+                          <span className="text-red-500 flex items-center">
+                            <X className="w-5 h-5 mr-1" />
+                            No
+                          </span>
+                        )}
+                      </td>
+                      <td className="px-6 py-5 whitespace-nowrap text-sm">
+                        {treatment.collagen ? (
+                          <span className="text-green-600 flex items-center">
+                            <Check className="w-5 h-5 mr-1" />
+                            <span>
+                              68% increase<sup>*</sup>
+                            </span>
+                          </span>
+                        ) : (
+                          <span className="text-red-500 flex items-center">
+                            <X className="w-5 h-5 mr-1" />
+                            No
+                          </span>
+                        )}
+                      </td>
+                      <td className="px-6 py-5 whitespace-nowrap text-sm text-gray-700">
+                        {treatment.bestFor}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-gray-500 p-4 italic">
+              <sup>*</sup>Source: Journal of Cosmetic Dermatology, 2022
+            </p>
+          </CardContent>
+        </Card>
+      </div>
 
-      <Card className="mb-12 bg-[#F2FDF6]">
-        <CardHeader>
-          <h2 className="text-2xl font-bold text-gray-800">The Sculptra® Experience</h2>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="bg-[#F2FDF6] p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">{step.title}</h3>
-                <p className="text-gray-700">{step.content}</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          The Sculptra® Experience
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {steps.map((step, index) => (
+            <Card
+              key={index}
+              className="border-none shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+            >
+              <div className="h-2 bg-gradient-to-r from-green-400 to-green-600"></div>
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">{step.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{step.content}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
 
-      <Card className="mb-12 bg-[#F2FDF6]">
-        <CardHeader>
-          <h2 className="text-2xl font-bold text-gray-800">Your Burning Questions</h2>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-[#F2FDF6] p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-800 mb-2">{faq.question}</h4>
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Your Burning Questions
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {faqs.map((faq, index) => (
+            <Card
+              key={index}
+              className="border-none shadow-md hover:shadow-lg transition-shadow h-full"
+            >
+              <CardContent className="p-6">
+                <h4 className="font-bold text-gray-800 mb-3 text-lg">{faq.question}</h4>
                 <p className="text-gray-700">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
 
-      <Card>
-        <CardContent className="text-center bg-[#F2FDF6] py-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Special Offer Ending Soon</h2>
-          <p className="text-lg text-gray-700 mb-8">Only 4 Discounted Vials Left</p>
-          <a
-            href="#"
-            className="inline-block px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-lg font-semibold"
-          >
-            Claim Your Trial Price →
-          </a>
-          <p className="text-gray-500 mt-8 max-w-2xl mx-auto">
-            P.S. The women who look 10 years younger didn&apos;t find a magic cream – they started
-            collagen treatments early. Where will your skin be in 6 months?
-          </p>
-        </CardContent>
+      <Card className="border-none shadow-2xl overflow-hidden">
+        <div className="bg-gradient-to-r from-green-600 to-green-400 p-1">
+          <CardContent className="text-center bg-white rounded-lg py-16 px-8">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Special Offer Ending Soon</h2>
+            <p className="text-xl text-gray-700 mb-2">Only 4 Discounted Vials Left</p>
+            <p className="text-lg text-gray-600 mb-8">Limited time pricing for new clients</p>
+            <a
+              href="#claim"
+              className="inline-block px-10 py-5 bg-green-600 text-white rounded-full shadow-xl hover:bg-green-700 transition-all transform hover:scale-105 font-semibold text-xl"
+            >
+              Claim Your Trial Price →
+            </a>
+            <p className="text-gray-600 mt-10 max-w-2xl mx-auto italic">
+              P.S. The women who look 10 years younger didn&apos;t find a magic cream – they started
+              collagen treatments early. Where will your skin be in 6 months?
+            </p>
+          </CardContent>
+        </div>
       </Card>
     </div>
   )
 }
 
 export default SculptraComponent
-
