@@ -58,9 +58,10 @@ export default function Footer() {
             </h3>
             <address className="text-gray-400 text-sm not-italic space-y-3">
               <p className="flex items-center">
-                <MapPin className="w-5 h-5 mr-2 text-green-400" />
+                <MapPin className="w-10 h-10 mr-2 text-green-400 transform scale-125" />
                 LG 10, Lower Ground Floor, Wisma UOA II, Jalan Pinang, 50450 Kuala Lumpur, Malaysia.
               </p>
+
               <p className="flex items-center">
                 <Phone className="w-5 h-5 mr-2 text-green-400" />
                 Mobile: 016-7025699 / 03-21635699 <br /> Main Line: +016-9215699
