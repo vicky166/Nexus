@@ -10,7 +10,6 @@ const CTA = () => {
           <span className="font-semibold text-green-700"> Sculptra®</span> isn’t a quick fix; it’s your skin’s naturalally, helping you rebuild collagen for results that 
           <em> evolve</em>, not fade.
         </p>
-
         <div className="bg-green-100 p-6 sm:p-10 mt-6 rounded-lg shadow-md w-full max-w-4xl">
           <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900">
             Limited-Time Trial Offer
@@ -22,7 +21,6 @@ const CTA = () => {
             (Save 25% for first-time clients. Only <span className="text-red-600 font-bold">15 spots</span> available this month.)
           </p>
         </div>
-
         <a
           href="#"
           className="mt-8 inline-block bg-green-600 text-white px-8 sm:px-12 py-4 sm:py-5 rounded-full font-semibold text-lg sm:text-2xl hover:bg-green-700 transition shadow-lg"
