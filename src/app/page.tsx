@@ -21,7 +21,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CTA/>
-      {/* <Top1/> */}
       <MedicalInfo />
       <Header />
       <Chart />

@@ -38,9 +38,7 @@ export default function Review() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Our Client&apos;s Reviews
-        
         </h2>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review) => (
             <Card key={review.id} className="h-full">
@@ -55,7 +53,6 @@ export default function Review() {
                       />
                     ))}
                   </div>
-
                   <blockquote className="text-lg text-muted-foreground">
                     {review.content}
                   </blockquote>
@@ -66,7 +63,6 @@ export default function Review() {
             </Card>
           ))}
         </div>
-
         <div className="mt-12 text-center"></div>
       </div>
     </section>

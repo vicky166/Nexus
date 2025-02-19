@@ -7,7 +7,7 @@ const CTA = () => {
         </h2>
         <p className="text-base sm:text-xl text-gray-700 mt-4 max-w-3xl">
           You’re not just chasing a younger reflection, you’re reclaiming the confidence that comes with looking as vibrant as you feel. 
-          <span className="font-semibold text-green-700"> Sculptra®</span> isn’t a quick fix; it’s your skin’s natural ally, helping you rebuild collagen for results that 
+          <span className="font-semibold text-green-700"> Sculptra®</span> isn’t a quick fix; it’s your skin’s naturalally, helping you rebuild collagen for results that 
           <em> evolve</em>, not fade.
         </p>
 

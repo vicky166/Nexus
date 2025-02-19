@@ -72,7 +72,6 @@ export default function Footer() {
               </p>
             </address>
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b border-green-500 pb-2">Follow Us</h3>
             <div className="flex space-x-4">

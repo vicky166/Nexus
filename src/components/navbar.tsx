@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { Menu, Search, User } from 'lucide-react'
 import Link from 'next/link'
@@ -34,7 +34,16 @@ export default function Navbar() {
               <img src="/img/logo.png" alt="Nexus Clinic" className="h-12 w-auto" />
             </Link>
             <div className="grid gap-1">
-              {["Aesthetic Clinic", "The Face", "The Body", "Fat & Weight Loss", "Hair Loss Treatment", "Female Only", "Male Only", "Medi Spa"].map((item) => (
+              {[
+                'Aesthetic Clinic',
+                'The Face',
+                'The Body',
+                'Fat & Weight Loss',
+                'Hair Loss Treatment',
+                'Female Only',
+                'Male Only',
+                'Medi Spa',
+              ].map((item) => (
                 <Link
                   key={item}
                   href="#"
@@ -61,7 +70,15 @@ export default function Navbar() {
                 Aesthetic Clinic
               </Link>
             </NavigationMenuLink>
-            {["The Face", "The Body", "Fat & Weight Loss", "Hair Loss Treatment", "Female Only", "Male Only", "Medi Spa"].map((item) => (
+            {[
+              'The Face',
+              'The Body',
+              'Fat & Weight Loss',
+              'Hair Loss Treatment',
+              'Female Only',
+              'Male Only',
+              'Medi Spa',
+            ].map((item) => (
               <NavigationMenuItem key={item}>
                 <NavigationMenuTrigger className="h-10 px-3 text-sm text-white bg-transparent hover:bg-white/5 data-[state=open]:bg-white/10">
                   {item}
@@ -74,9 +91,7 @@ export default function Navbar() {
                         className="block select-none space-y-1 rounded-md p-2 text-sm leading-none no-underline outline-none hover:bg-white/5"
                       >
                         <div className="font-medium">Treatment 1</div>
-                        <p className="line-clamp-2 text-xs text-white/70">
-                          Treatment description
-                        </p>
+                        <p className="line-clamp-2 text-xs text-white/70">Treatment description</p>
                       </Link>
                     </NavigationMenuLink>
                   </div>
@@ -108,7 +123,7 @@ export default function Navbar() {
               <User className="h-5 w-5" />
             </button>
             <div className="absolute right-0 mt-1 w-40 bg-[#2F5649] text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-              {["Profile", "Settings", "Logout"].map((item) => (
+              {['Profile', 'Settings', 'Logout'].map((item) => (
                 <Link
                   key={item}
                   href={`/${item.toLowerCase()}`}

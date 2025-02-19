@@ -1,8 +1,8 @@
 'use client'
-import { FaDollarSign } from 'react-icons/fa';
-import { IoMdCheckmarkCircle } from 'react-icons/io';
-import Link from 'next/link';
-import { useRef } from 'react';
+import { FaDollarSign } from 'react-icons/fa'
+import { IoMdCheckmarkCircle } from 'react-icons/io'
+import Link from 'next/link'
+import { useRef } from 'react'
 
 const products = [
   {
@@ -110,25 +110,25 @@ const products = [
     imageUrl: '/img/chemical.jpg',
     available: true,
   },
-];
+]
 
 export const Products = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null)
 
   const scroll = (direction: number) => {
-    const scrollAmount = 300;
+    const scrollAmount = 300
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
         left: direction * scrollAmount,
         behavior: 'smooth',
-      });
+      })
     }
-  };
+  }
 
   return (
     <section className="container mx-auto px-4 py-12">
       <h2 className="text-4xl font-bold text-center text-white mb-12">Our Treatments & Products</h2>
-      
+
       <div className="relative flex items-center">
         <button
           onClick={() => scroll(-1)}
@@ -136,7 +136,7 @@ export const Products = () => {
         >
           &#8592;
         </button>
-        
+
         <div ref={scrollRef} className="flex overflow-x-auto space-x-6 pb-4 scrollbar-hide px-12">
           {products.map((product, index) => (
             <div
@@ -164,13 +164,15 @@ export const Products = () => {
                   ) : (
                     <div className="text-red-500 text-sm">Currently Unavailable</div>
                   )}
-                  <Link href="/contact" className="text-blue-500 text-sm font-semibold">Book Now</Link>
+                  <Link href="/contact" className="text-blue-500 text-sm font-semibold">
+                    Book Now
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
+
         <button
           onClick={() => scroll(1)}
           className="absolute right-2 z-10 bg-gray-800 text-white p-3 rounded-full shadow-lg"
@@ -179,7 +181,7 @@ export const Products = () => {
         </button>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

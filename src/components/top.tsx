@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 
 export function Top() {
   return (
@@ -13,6 +13,6 @@ export function Top() {
           </Button>
         </div>
       </div>
-    </div> 
+    </div>
   )
 }

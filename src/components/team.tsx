@@ -27,7 +27,7 @@ const doctors: TeamMember[] = [
     imageUrl: '/img/preetha.png',
     specialties: ['Anti-Aging', 'Body Sculpting'],
     experience: '12+ Years Experience',
-  }, 
+  },
   {
     id: 3,
     name: 'DR. ASHVINIA',

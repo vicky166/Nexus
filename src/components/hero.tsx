@@ -78,22 +78,18 @@ export default function Hero() {
                   className="w-full px-3 py-2 rounded-lg border-gray-300 shadow-sm"
                 />
               ))}
-            </div>
-            
-            {/* Add the Remarks field here */}
+            </div>            
             <div>
               <Input
                 placeholder="Additional remarks (optional)"
                 className="w-full px-3 py-2 rounded-lg border-gray-300 shadow-sm"
               />
             </div>
-            
             <Button className="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg py-3 font-semibold text-base shadow-md transition duration-200 ease-in-out transform hover:scale-[1.05]">
               Schedule Your Free Session <ArrowRight className="w-4 h-4 inline-block ml-1" />
             </Button>
           </div>
         </div>
-
         <div
           ref={sliderRef}
           className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] cursor-ew-resize rounded-lg overflow-hidden shadow-lg transition-transform duration-300 ease-in-out"
