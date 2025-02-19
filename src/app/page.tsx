@@ -26,7 +26,7 @@ export default function Home() {
       <Chart />
       <SculptraComponent/>
       <Product />
-      <Video videoId={''} />
+      <Video  />
       <Treatment />
       <Products />
       <Team />

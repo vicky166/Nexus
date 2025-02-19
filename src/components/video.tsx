@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { useState, useEffect } from 'react'
 
 export default function Video({
-  videoId = 'f10TT_9SCl0',  
   title = "Reawaken Your Skin's Youth with Sculptra®",
   subtitle = "Because Aging is Inevitable, Looking Tired Doesn't Have to Be",
 }) {
