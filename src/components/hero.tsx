@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import {  ArrowRight, Star, Check } from 'lucide-react'
+import { ArrowRight, Star, Check } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
@@ -50,7 +50,7 @@ export default function Hero() {
           </div>
           
           <ul className="space-y-2 text-gray-700 text-base">
-            {[
+            {[ 
               "Immediate results with multiple sessions for long-term benefits.",
               "Non-surgical procedure that reduces wrinkles and fine lines.",
               "Promotes collagen production and skin tightening.",
@@ -62,7 +62,7 @@ export default function Hero() {
             ))}
           </ul>
           
-          <div className="bg-white/70 backdrop-blur-lg p-6 md:p-8 rounded-xl shadow-xl space-y-4 border border-gray-300 transition-transform transform hover:scale-[1.02] duration-300 ease-in-out">
+          <div className="bg-white/70  p-6 md:p-8 rounded-xl shadow-xl space-y-4 border border-gray-300 transition-transform transform hover:scale-[1.02] duration-300 ease-in-out">
             <h3 className="text-xl font-semibold text-gray-900 text-center">
               Book a Private Consultation
             </h3>
@@ -79,6 +79,15 @@ export default function Hero() {
                 />
               ))}
             </div>
+            
+            {/* Add the Remarks field here */}
+            <div>
+              <Input
+                placeholder="Additional remarks (optional)"
+                className="w-full px-3 py-2 rounded-lg border-gray-300 shadow-sm"
+              />
+            </div>
+            
             <Button className="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg py-3 font-semibold text-base shadow-md transition duration-200 ease-in-out transform hover:scale-[1.05]">
               Schedule Your Free Session <ArrowRight className="w-4 h-4 inline-block ml-1" />
             </Button>
