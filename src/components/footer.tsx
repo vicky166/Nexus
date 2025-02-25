@@ -33,7 +33,6 @@ export default function Footer() {
               and excellence.
             </p>
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b border-green-500 pb-2">
               Our Services
@@ -93,7 +92,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         <div className="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
           © {new Date().getFullYear()} Nexus Clinic. All rights reserved.
         </div>

@@ -18,7 +18,6 @@ const doctors: TeamMember[] = [
     title: 'Medical Aesthetic Doctor',
     imageUrl: '/img/aris.png',
     specialties: ['Facial Contouring', 'Skin Rejuvenation'],
-    experience: '15+ Years Experience',
   },
   {
     id: 2,
@@ -26,7 +25,6 @@ const doctors: TeamMember[] = [
     title: 'Medical Aesthetic Doctor',
     imageUrl: '/img/preetha.png',
     specialties: ['Anti-Aging', 'Body Sculpting'],
-    experience: '12+ Years Experience',
   },
   {
     id: 3,
@@ -34,7 +32,6 @@ const doctors: TeamMember[] = [
     title: 'Medical Aesthetic Doctor',
     imageUrl: '/img/ashvini.jpg',
     specialties: ['Dermal Fillers', 'Laser Treatments'],
-    experience: '10+ Years Experience',
   },
   {
     id: 4,
@@ -42,7 +39,7 @@ const doctors: TeamMember[] = [
     title: 'Medical Aesthetic Doctor',
     imageUrl: '/img/charmaine.png',
     specialties: ['Skin Care', 'Hair Restoration'],
-    experience: '8+ Years Experience',
+    
   },
 ]
 
@@ -58,7 +55,6 @@ export default function TeamSection() {
             Combining expertise with artistry to help you achieve your aesthetic goals.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {doctors.map((doctor) => (
             <Card
@@ -68,21 +64,17 @@ export default function TeamSection() {
               <div className="absolute inset-0 w-full h-full">
                 <img
                   src={doctor.imageUrl}
-                  alt={doctor.name}
+                  alt={doctor.name} 
                   className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500 rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
               </div>
-
               <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
                 <div className="flex items-center mb-2">
-                  <Star className="w-5 h-5 text-yellow-400 mr-2" />
                   <span className="text-yellow-400 text-sm font-medium">{doctor.experience}</span>
                 </div>
-
                 <h3 className="font-bold text-2xl mb-1">{doctor.name}</h3>
                 <p className="text-gray-300 mb-3">{doctor.title}</p>
-
                 <div className="space-y-2 mb-4">
                   {doctor.specialties?.map((specialty, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-200">
@@ -91,7 +83,6 @@ export default function TeamSection() {
                     </div>
                   ))}
                 </div>
-
                 <button className="w-full py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
                   Book Consultation
                 </button>

@@ -10,7 +10,7 @@ export default function Video({
   const [isClient, setIsClient] = useState(false)
   useEffect(() => {
     setIsClient(true) 
-  }, [])
+  }, []) 
 
   return (
     <Card className="w-full max-w-4xl mt-16 mb-16 mx-auto overflow-hidden shadow-lg border border-gray-700 rounded-2xl bg-gradient-to-b from-gray-900 to-black text-white">
@@ -28,7 +28,7 @@ export default function Video({
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute top-0 left-0 w-full h-full border-0"
-            /> 
+            />  
           ) : (
             <div className="w-full h-64 flex items-center justify-center text-white bg-gray-800">
               <Loader2 className="w-8 h-8 animate-spin text-green-500" />
@@ -38,5 +38,6 @@ export default function Video({
         </div>
       </CardContent>
     </Card>
+    
   )
 }
