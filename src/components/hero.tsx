@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-green-50 to-white overflow-hidden flex items-center">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20" />
-      
+
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 sm:px-12 md:px-16 py-10 items-center">
         
         <div className="space-y-6 text-center lg:text-left">
@@ -42,27 +42,27 @@ export default function Hero() {
             <span className="block text-green-600 mt-2">Laser Treatment</span>
           </h1>
           
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 bg-green-100 text-green-800 px-3 py-2 rounded-full text-sm font-medium shadow-md">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium shadow-md">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-4 h-4 text-yellow-500" />
             ))}
             <span>1,368 Reviews | 2 Questions, 32 Answers</span>
           </div>
-          
-          <ul className="space-y-2 text-gray-700 text-base">
-            {[ 
+
+          <ul className="space-y-3 text-gray-700 text-base">
+            {[
               "Immediate results with multiple sessions for long-term benefits.",
               "Non-surgical procedure that reduces wrinkles and fine lines.",
               "Promotes collagen production and skin tightening.",
               "Effective for treating sun damage and acne scars."
             ].map((item, index) => (
-              <li key={index} className="flex items-center gap-2">
+              <li key={index} className="flex items-center gap-3">
                 <Check className="w-5 h-5 text-green-600" /> {item}
               </li>
             ))}
           </ul>
           
-          <div className="bg-white/70  p-6 md:p-8 rounded-xl shadow-xl space-y-4 border border-gray-300 transition-transform transform hover:scale-[1.02] duration-300 ease-in-out">
+          <div className="bg-white/80 p-6 md:p-8 rounded-xl shadow-xl space-y-4 border border-gray-300 transition-transform transform hover:scale-[1.02] duration-300 ease-in-out">
             <h3 className="text-xl font-semibold text-gray-900 text-center">
               Book a Private Consultation
             </h3>
@@ -75,44 +75,45 @@ export default function Hero() {
                   key={index}
                   type={placeholder === "Email Address" ? "email" : placeholder === "Phone Number" ? "tel" : "text"}
                   placeholder={placeholder}
-                  className="w-full px-3 py-2 rounded-lg border-gray-300 shadow-sm"
+                  className="w-full px-3 py-2 rounded-lg border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500"
                 />
               ))}
             </div>            
             <div>
               <Input
                 placeholder="Additional remarks (optional)"
-                className="w-full px-3 py-2 rounded-lg border-gray-300 shadow-sm"
+                className="w-full px-3 py-2 rounded-lg border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500"
               />
             </div>
-            <Button className="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg py-3 font-semibold text-base shadow-md transition duration-200 ease-in-out transform hover:scale-[1.05]">
+            <Button className="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg py-3 font-semibold text-base shadow-md transition duration-300 transform hover:scale-[1.05] hover:shadow-green-500/50">
               Schedule Your Free Session <ArrowRight className="w-4 h-4 inline-block ml-1" />
             </Button>
           </div>
         </div>
+
         <div
           ref={sliderRef}
           className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] cursor-ew-resize rounded-lg overflow-hidden shadow-lg transition-transform duration-300 ease-in-out"
         >
-          <Image src="/img/before3.jpg" alt="Before treatment" fill className="object-cover transition-opacity duration-[0.5s]" priority />
+          <Image src="/img/before3.jpg" alt="Before treatment" fill className="object-cover transition-opacity duration-500" priority />
           <div
             className="absolute inset-0"
             style={{
               clipPath: `polygon(${splitPosition}% 0, 100% 0, 100% 100%, ${splitPosition}% 100%)`,
             }}
           >
-            <Image src="/img/brfore4.jpg" alt="After treatment" fill className="object-cover transition-opacity duration-[0.5s]" priority />
+            <Image src="/img/brfore4.jpg" alt="After treatment" fill className="object-cover transition-opacity duration-500" priority />
           </div>
           <div
             className="absolute top-0 bottom-0 w-px bg-white cursor-ew-resize"
             style={{ left: `${splitPosition}%`, transform: `translateX(-50%)` }}
           >
-            <div className="absolute top-1/2 -translate-y-1/2 w-[24px] h-[24px] bg-white rounded-full shadow-md flex items-center justify-center border border-green-500">
-              <div className="w-[16px] h-[16px] flex items-center justify-center text-green-600">⋮</div>
+            <div className="absolute top-1/2 -translate-y-1/2 w-7 h-7 bg-white rounded-full shadow-md flex items-center justify-center border border-green-500 hover:scale-110 transition-all duration-200">
+              <div className="w-4 h-4 flex items-center justify-center text-green-600">⋮</div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
