@@ -166,7 +166,7 @@ const SculptraComponent = () => {
 
   return (
     <div className="max-w-7xl mx-auto bg-gradient-to-br from-green-50 to-white">
-    
+      
       <div className="relative overflow-hidden rounded-3xl shadow-2xl mb-24">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-400 opacity-10"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-green-100 rounded-full opacity-60 transform translate-x-1/3 -translate-y-1/4"></div>
@@ -217,6 +217,8 @@ const SculptraComponent = () => {
           </div>
         </div>
       </div>
+
+      
       <div className="mb-24">
         <div className="text-center mb-16">
           <h2 className="inline-block text-4xl font-bold text-gray-800 mb-4 relative">
@@ -227,7 +229,7 @@ const SculptraComponent = () => {
             Experience the gradual evolution of your skin's natural beauty over time
           </p>
         </div>
-
+    
         <div className="relative px-4">
           <div className="absolute top-24 left-0 right-0 h-1 bg-green-200 hidden md:block"></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -249,7 +251,8 @@ const SculptraComponent = () => {
           </div>
         </div>
       </div>
-      <Card className="mb-24 border-none shadow-2xl overflow-hidden rounded-3xl">
+
+            <Card className="mb-24 border-none shadow-2xl overflow-hidden rounded-3xl">
         <div className="bg-gradient-to-r from-green-100 to-green-50 p-1">
           <CardContent className="p-8 md:p-12 bg-white rounded-2xl">
             <div className="text-center mb-12">
@@ -350,6 +353,8 @@ const SculptraComponent = () => {
           </CardContent>
         </div>
       </Card> 
+
+      
       <div className="mb-24">
         <div className="text-center mb-16">
           <h2 className="inline-block text-4xl font-bold text-gray-800 mb-4 relative">
@@ -383,6 +388,7 @@ const SculptraComponent = () => {
         </div>
       </div>
 
+      
       <div className="mb-24 px-4">
         <div className="text-center mb-16">
           <h2 className="inline-block text-4xl font-bold text-gray-800 mb-4 relative">
@@ -491,6 +497,8 @@ const SculptraComponent = () => {
           ))}
         </div>
       </div>
+
+
       <Card className="border-none shadow-2xl overflow-hidden rounded-3xl relative">
         <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-green-400 opacity-90"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full opacity-10 transform translate-x-1/3 -translate-y-1/4"></div>

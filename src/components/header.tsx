@@ -17,16 +17,13 @@ export default function Header() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
         </div>
-
         <div className="flex flex-col space-y-6">
           <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
             Fractional CO2 <span className="text-green-600">Laser Treatment</span>
           </h2>
-
           <p className="text-lg text-gray-800 leading-relaxed">
             Experience the power of advanced <span className="font-semibold text-green-700">Fractional CO2 laser treatment</span>, designed to rejuvenate and restore your skin by reducing scars, wrinkles, and fine lines.
           </p>
-
           <ul className="space-y-3">
             <li className="flex items-center gap-3 text-gray-800 text-lg">
               <Check className="w-6 h-6 text-green-600" />
