@@ -127,7 +127,7 @@ export const Products = () => {
 
   return (
     <section className="container mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold text-center text-white mb-12">Our Treatments & Products</h2>
+      <h2 className="text-4xl font-bold text-center text-black mb-12">Our Treatments & Products</h2>
 
       <div className="relative flex items-center">
         <button
